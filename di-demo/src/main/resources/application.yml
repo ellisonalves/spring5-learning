@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: es
+
+guru:
+  user: John
+  password: somepass
+  dburl: sadsdas
+  jms:
+    username: JMS Username
+    password: jms_password
+    url: jms_url

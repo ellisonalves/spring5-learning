@@ -1,0 +1,32 @@
+{"properties": [
+  {
+    "name": "guru.user",
+    "type": "java.lang.String",
+    "description": "A description for 'guru.user'"
+  },
+  {
+    "name": "guru.jms.username",
+    "type": "java.lang.String",
+    "description": "A description for 'guru.jms.username'"
+  },
+  {
+    "name": "guru.password",
+    "type": "java.lang.String",
+    "description": "A description for 'guru.password'"
+  },
+  {
+    "name": "guru.dburl",
+    "type": "java.lang.String",
+    "description": "A description for 'guru.dburl'"
+  },
+  {
+    "name": "guru.jms.password",
+    "type": "java.lang.String",
+    "description": "A description for 'guru.jms.password'"
+  },
+  {
+    "name": "guru.jms.url",
+    "type": "java.lang.String",
+    "description": "A description for 'guru.jms.url'"
+  }
+]}
