@@ -1,6 +1,5 @@
 package com.ellisonalves.recipeapp.domain;
 
-import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -53,7 +52,7 @@ public class Recipe {
 	private Difficulty difficulty;
 
 	@OneToMany(mappedBy = "recipe", cascade = CascadeType.ALL)
-	private Set<Ingredient> ingredients = new HashSet<>();
+	private Set<Ingredient> ingredients;
 
 	@Lob
 	private Byte[] image;
@@ -63,7 +62,7 @@ public class Recipe {
 
 	@ManyToMany
 	@JoinTable(name = "recipe_category", joinColumns = @JoinColumn(name = "recipe_id"), inverseJoinColumns = @JoinColumn(name = "category_id"))
-	private Set<Category> categories = new HashSet<>();
+	private Set<Category> categories;
 
 	public void addIngredient(Ingredient ingredient) {
 		ingredients.add(ingredient);
