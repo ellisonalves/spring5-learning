@@ -5,22 +5,27 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.ellisonalves.recipeapp.repositories.RecipeRepository;
+import com.ellisonalves.recipeapp.services.RecipeService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Controller
 public class IndexController {
 
-	private RecipeRepository recipeRepository;
+	private RecipeService recipeService;
 
 	@Autowired
-	public IndexController(RecipeRepository recipeRepository) {
+	public IndexController(RecipeService recipeService) {
 		super();
-		this.recipeRepository = recipeRepository;
+		this.recipeService = recipeService;
 	}
 
 	@RequestMapping({ "", "/", "/index" })
 	public String getIndexPage(Model model) {
-		model.addAttribute("recipes", recipeRepository.findAll());
+		log.debug("Getting Index Page");
+
+		model.addAttribute("recipes", recipeService.getRecipes());
 
 		return "index";
 	}
